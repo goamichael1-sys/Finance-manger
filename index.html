@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Finance Manager</h1>
+        <p>Take control of your money.</p>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>Financial Overview</h2>
+
+            <div class="card">
+                <h3>Total balance</h3>
+                <p id="balance">USD 0.00</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Income</h3>
+                <p id="income">USD 0.00</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Expenses</h3>
+                <p id="expenses">USD 0.00</p>
+            </div>
+
+            <div class="card">
+                <h3>Savings Rate</h3>
+                <p id="savingsRate">0.00%</p>
+            </div>
+        </section>
+
+        <section class="transactions">
+            <h2>Add Transactions</h2>
+            <form id="transactionForm">
+                <select id="type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <input type="text" id="description" name="description" placeholder="Description" required>
+                <input type="number" id="amount" name="amount" placeholder="Amount in USD" required>
+                <input type="date" id="date" name="date" required>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+
+        <section class="transaction-list">
+            <h2>Transaction History</h2>
+            <div id="transactionList"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
